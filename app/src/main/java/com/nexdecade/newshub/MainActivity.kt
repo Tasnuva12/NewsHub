@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
 /*        // Create the observer which updates the UI.
         val postObserver = Observer<List<Post>> { data ->
             // Update the UI, in this case, a TextView.
-            Log.d("POSTS", "respoonse: "+data)
+            Log.d("POSTS", "response: "+data)
         }
         // Observe the LiveData, passing in this activity as the LifecycleOwner and the observer.
         viewModel.posts.observe(this, postObserver)*/
