@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:id="@+id/main_id"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:id="@+id/articleImage"
+            android:layout_width="300dp"
+            android:layout_height="248dp"
+            android:layout_marginStart="10dp"
+
+            android:layout_marginTop="5dp"
+            android:contentDescription="@string/todo2"
+
+            android:src="@drawable/premium_photo_1664474619075_644dd191935f" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="5dp"
+            android:text="@string/this_is_a_image"
+            android:id="@+id/imageText"
+
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="#D3D3D3" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:id="@+id/title"
+            android:text="This is a image this is a sfsfdthis is a image this is a image"
+            android:textSize="20dp"
+
+
+
+            android:textStyle="bold"
+
+            />
+
+        <View
+            android:layout_width="50dp"
+            android:layout_height="8dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="#D3D3D3" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:contentDescription="TODO"
+                android:src="@drawable/t_sport_logo" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+
+                android:text="@string/this_is_a_text"
+                android:textColor="#808080" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="20dp"
+
+                android:layout_height="15dp"
+                android:layout_gravity="center"
+                android:contentDescription="TODO"
+
+                android:src="@drawable/clock2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="19 Dec, 2023, 6.34 pm"
+                android:textColor="#808080"
+                android:id="@+id/time_and_date"
+
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="30dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/fb" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/twitter" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/share" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:id="@id/description"
+            android:text="রীতিমতো নেচে গেয়ে এশিয়া কাপ নিয়ে ঘরে ফিরেছে এশিয়া কাপ জেতা বাংলাদেশ অনূর্ধ্ব-১৯ দল। তবে খুব বেশি আনন্দের সুযোগ পাচ্ছে না দলটা, ঘোষণা হয়েছে দলটার ক্রিকেটীয় নতুন ব্যস্ততা। মঙ্গলবার টুর্নামেন্টের চার দলের স্কোয়াড ও সূচি ঘোষণা করে বাংলাদেশ ক্রিকেট বোর্ড।
+
+দুবাইয়ে যুব এশিয়া কাপজয়ী অধিনায়ক মাহফুজুর রহমান রাব্বির পাশাপাশি বিসিএলের ওয়ানডে সংস্করণে আছেন আরও বেশ কয়েকজন এশিয়া কাপজয়ী ক্রিকেটার। তারা হলেন - জিসান আলম, আশিকুর রহমান শিবলী, আরিফুল ইসলাম, ওয়াসি সিদ্দিকী ও চৌধুরী মোহাম্মদ রিজওয়ান।
+" />
+
+
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="20dp"
+            android:text="আরো পড়ুন"
+
+
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:id="@+id/readMore"
+
+            android:layout_height="wrap_content"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycleReadMore"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:nestedScrollingEnabled="false"
+            />
+
+
+
+
+
+
+
+
+
+    </LinearLayout>
+</ScrollView>

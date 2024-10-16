@@ -1,5 +1,6 @@
 package com.nexdecade.newshub.di
 
+import com.nexdecade.newshub.Constants.Companion.BASE_URL
 import com.nexdecade.newshub.data.NewsApi
 import dagger.Module
 import dagger.Provides
@@ -15,19 +16,19 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 object NetworkModule {
 
-    @Provides
-    fun provideBaseUrl(): String = "https://jsonplaceholder.typicode.com/"
+  //  @Provides
+  //  fun provideBaseUrl(): String = "https://jsonplaceholder.typicode.com/"
 
     @Provides
     @Singleton
-    fun provideRetrofit(baseUrl: String): Retrofit {
+    fun provideRetrofit(): Retrofit {
         val logging = HttpLoggingInterceptor()
         logging.setLevel(HttpLoggingInterceptor.Level.BODY)
 
         val client = OkHttpClient.Builder().addInterceptor(logging).build()
 
         return Retrofit.Builder()
-            .baseUrl(baseUrl)
+            .baseUrl(BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
             .client(client)
             .build()
