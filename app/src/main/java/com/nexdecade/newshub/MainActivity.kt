@@ -1,31 +1,16 @@
 package com.nexdecade.newshub
 
-import android.content.Context
 import android.os.Bundle
-import android.util.AttributeSet
-import android.util.Log
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
-import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import androidx.lifecycle.Observer
 import androidx.navigation.NavController
-import androidx.navigation.NavOptions
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.navOptions
-import androidx.navigation.ui.setupActionBarWithNavController
-import androidx.recyclerview.widget.DividerItemDecoration
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.nexdecade.newshub.data.Article
-import com.nexdecade.newshub.data.NewsData
-import com.nexdecade.newshub.data.Post
-import com.nexdecade.newshub.data.SourceData
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -34,8 +19,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var imageView: ImageView
     private lateinit var title: TextView
     private lateinit var profile: ImageView
-    private lateinit var notification: ImageView
-    private lateinit var tv: ImageView
+    private lateinit var search: ImageView
+    private lateinit var favourite: ImageView
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -50,19 +35,17 @@ class MainActivity : AppCompatActivity() {
         }
         // find the views by their id
         title = findViewById(R.id.pageTitle)
-        imageView = findViewById(R.id.imageView4)
-        profile = findViewById(R.id.profile)
-        notification = findViewById(R.id.bell)
-        tv = findViewById(R.id.tv)
+        imageView = findViewById(R.id.newsLogo)
 
-        profile.setOnClickListener {
-            navController.navigate(R.id.profileFragment)
+        search = findViewById(R.id.search)
+        favourite = findViewById(R.id.favourite)
+
+
+        search.setOnClickListener{
+            navController.navigate(R.id.searchFragment)
         }
-        notification.setOnClickListener{
-            navController.navigate(R.id.notificationFragment)
-        }
-        tv.setOnClickListener{
-            navController.navigate(R.id.TVFragment)
+        favourite.setOnClickListener{
+            navController.navigate(R.id.favouriteFragment)
         }
 
         imageView.setOnClickListener{
@@ -99,28 +82,18 @@ class MainActivity : AppCompatActivity() {
                 }
 
                 R.id.navigation_home -> {
-                    imageView.setImageResource(R.drawable.logo_tsports)
+                    imageView.setImageResource(R.drawable.news_icon)
                     val layoutParam = imageView.layoutParams
                     layoutParam.width = 200
                     layoutParam.height = 200
                     title.visibility = View.INVISIBLE
                 }
 
-                R.id.profileFragment -> {
-                    title.visibility = View.VISIBLE
-                    title.setText("Profile")
-                    imageView.setImageResource(R.drawable.arrow)
-                    val layoutParam = imageView.layoutParams
-                    layoutParam.width = 80
-                    layoutParam.height = 300
-                    imageView.setOnClickListener {
-                        navController.popBackStack()
-                    }
-                }
 
-                R.id.notificationFragment -> {
+
+                R.id.searchFragment -> {
                     title.visibility = View.VISIBLE
-                    title.setText("Notification")
+                    title.setText("Search")
                     imageView.setImageResource(R.drawable.arrow)
                     val layoutParam = imageView.layoutParams
                     layoutParam.width = 80
@@ -129,9 +102,9 @@ class MainActivity : AppCompatActivity() {
                         navController.popBackStack()
                     }
                 }
-                R.id.TVFragment->{
+                R.id.favouriteFragment->{
                     title.visibility = View.VISIBLE
-                    title.setText("TV")
+                    title.setText("Favourite")
                     imageView.setImageResource(R.drawable.arrow)
                     val layoutParam = imageView.layoutParams
                     layoutParam.width = 80

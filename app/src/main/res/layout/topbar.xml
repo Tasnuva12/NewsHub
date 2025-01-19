@@ -5,16 +5,17 @@
     android:id="@+id/topbar_layout"
     android:layout_height="?actionBarSize"
     app:cardElevation="0dp">
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:paddingHorizontal="16dp">
 
         <ImageView
-            android:id="@+id/imageView4"
+            android:id="@+id/newsLogo"
             android:layout_width="80dp"
             android:layout_height="33dp"
-            android:src="@drawable/logo_tsports"
+            android:src="@drawable/news_icon"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -25,49 +26,46 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=""
-            android:visibility="gone"
             android:textSize="20sp"
+            android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@id/tv"
+            app:layout_constraintEnd_toEndOf="@id/favourite"
             app:layout_constraintHorizontal_bias="0.055"
-            app:layout_constraintStart_toEndOf="@id/imageView4"
+            app:layout_constraintStart_toEndOf="@id/newsLogo"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.506" />
 
         <ImageView
+            android:id="@+id/favourite"
             android:layout_width="16dp"
             android:layout_height="17dp"
-            android:id="@+id/tv"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:src="@drawable/tv_icon"
+            android:layout_marginStart="56dp"
+            android:src="@drawable/love"
 
 
-            app:layout_constraintEnd_toStartOf="@id/bell"
-            app:layout_constraintHorizontal_bias="0.956"
-            app:layout_constraintStart_toEndOf="@+id/imageView4"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageView
-            android:id="@+id/bell"
-            android:layout_width="16dp"
-            android:layout_height="17dp"
-            android:layout_marginEnd="8dp"
-            android:src="@drawable/notification_bell"
-            app:layout_constraintBottom_toBottomOf="parent"
-
-
-            app:layout_constraintEnd_toStartOf="@id/profile"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.506" />
-
-        <ImageView
-            android:layout_width="16dp"
-            android:layout_height="17dp"
-            android:id="@+id/profile"
-            android:src="@drawable/p"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintHorizontal_bias="0.916"
+            app:layout_constraintStart_toEndOf="@+id/newsLogo"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.51" />
+
+        <ImageView
+            android:id="@+id/search"
+            android:layout_width="16dp"
+            android:layout_height="17dp"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/search"
+            app:layout_constraintBottom_toBottomOf="parent"
+
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/favourite"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/newsLogo"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.51" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

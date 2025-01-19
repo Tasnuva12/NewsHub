@@ -74,6 +74,13 @@ dependencies {
     implementation(libs.androidx.lifecycle.runtime.compose)
     implementation(libs.androidx.lifecycle.viewmodel.savedstate)
     kapt(libs.androidx.lifecycle.compiler)
+
+    // Room dependencies
+    implementation ("androidx.room:room-runtime:2.5.1" ) // Use the latest version
+    annotationProcessor ("androidx.room:room-compiler:2.5.1" ) // For Java users
+
+    // For Kotlin users, use KAPT instead of annotationProcessor
+    kapt ("androidx.room:room-compiler:2.5.1")
     //coil
     implementation(libs.coil)
 

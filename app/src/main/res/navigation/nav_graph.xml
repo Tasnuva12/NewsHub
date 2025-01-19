@@ -9,64 +9,55 @@
         android:name="com.nexdecade.newshub.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
+
+
         <action
             android:id="@+id/action_navigation_home_to_navigation_article"
             app:destination="@id/navigation_article" />
         <action
-            android:id="@+id/action_navigation_home_to_profileFragment"
-            app:destination="@id/profileFragment" />
+            android:id="@+id/action_navigation_home_to_searchFragment"
+            app:destination="@id/searchFragment" />
         <action
-            android:id="@+id/action_navigation_home_to_TVFragment"
-            app:destination="@id/TVFragment" />
-        <action
-            android:id="@+id/action_navigation_home_to_notificationFragment"
-            app:destination="@id/notificationFragment" />
+            android:id="@+id/action_navigation_home_to_favouriteFragment"
+            app:destination="@id/favouriteFragment" />
     </fragment>
     <fragment
         android:id="@+id/navigation_article"
         android:name="com.nexdecade.newshub.ArticleFragment"
         android:label="ArticleFragment" >
+
+
         <action
-            android:id="@+id/action_articleFragment2_to_homeFragment"
+            android:id="@+id/action_navigation_article_to_navigation_home"
             app:destination="@id/navigation_home" />
-        <action
-            android:id="@+id/action_navigation_article_to_profileFragment"
-            app:destination="@id/profileFragment" />
     </fragment>
 
-    <fragment
-        android:id="@+id/profileFragment"
-        android:name="com.nexdecade.newshub.ProfileFragment"
-        android:label="fragment_profile"
-        tools:layout="@layout/fragment_profile" >
 
-        <action
-            android:id="@+id/action_profileFragment_to_TVFragment2"
-            app:destination="@id/TVFragment" />
-        <action
-            android:id="@+id/action_profileFragment_to_notificationFragment"
-            app:destination="@id/notificationFragment" />
-    </fragment>
     <fragment
-        android:id="@+id/TVFragment"
-        android:name="com.nexdecade.newshub.TVFragment"
+        android:id="@+id/favouriteFragment"
+        android:name="com.nexdecade.newshub.FavouriteFragment"
         android:label="fragment_t_v"
-        tools:layout="@layout/fragment_t_v" >
+        tools:layout="@layout/fragment_favourite" >
+
 
         <action
-            android:id="@+id/action_TVFragment_to_notificationFragment4"
-            app:destination="@id/notificationFragment" />
+            android:id="@+id/action_favouriteFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+        <action
+            android:id="@+id/action_favouriteFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
     </fragment>
     <fragment
-        android:id="@+id/notificationFragment"
-        android:name="com.nexdecade.newshub.NotificationFragment"
+        android:id="@+id/searchFragment"
+        android:name="com.nexdecade.newshub.SearchFragment"
         android:label="fragment_notification"
-        tools:layout="@layout/fragment_notification" >
+        tools:layout="@layout/fragment_search" >
+
         <action
-            android:id="@+id/action_notificationFragment_to_TVFragment"
-            app:destination="@id/TVFragment" />
+            android:id="@+id/action_searchFragment_to_favouriteFragment"
+            app:destination="@id/favouriteFragment" />
         <action
-            android:id="@+id/action_notificationFragment_to_profileFragment"
-            app:destination="@id/profileFragment" />
+            android:id="@+id/action_searchFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
     </fragment>
 </navigation>
