@@ -1,15 +1,10 @@
 package com.nexdecade.newshub
 
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.nexdecade.newshub.Constants.Companion.API_KEY
-import com.nexdecade.newshub.data.Article
-import com.nexdecade.newshub.data.NewsData
+import com.nexdecade.newshub.models.Article
 import com.nexdecade.newshub.data.NewsDataRepository
-import com.nexdecade.newshub.data.SourceData
-import com.nexdecade.newshub.data.SourceDataRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject

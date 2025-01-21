@@ -76,9 +76,13 @@ dependencies {
     implementation(libs.androidx.lifecycle.viewmodel.savedstate)
     kapt(libs.androidx.lifecycle.compiler)
 
+
+
+    val room_version = "2.6.1"
+
     // Room dependencies
-    implementation ("androidx.room:room-runtime:2.5.1" ) // Use the latest version
-    annotationProcessor ("androidx.room:room-compiler:2.5.1" ) // For Java users
+    implementation ("androidx.room:room-runtime:$room_version" ) // Use the latest version
+
 
     // For Kotlin users, use KAPT instead of annotationProcessor
     kapt ("androidx.room:room-compiler:2.5.1")

@@ -1,4 +1,4 @@
-package com.nexdecade.newshub
+package com.nexdecade.newshub.adapters
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,13 +6,14 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
-import androidx.navigation.NavController
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
-import com.nexdecade.newshub.data.Article
+import com.nexdecade.newshub.R
+import com.nexdecade.newshub.models.Article
 
-class ReadMoreAdapter(private var articles: List<Article>, private val onClick: (Article) -> Unit) :RecyclerView.Adapter<ReadMoreAdapter.ReadMoreViewHolder>() {
-    class ReadMoreViewHolder(view: View):RecyclerView.ViewHolder(view) {
+class ReadMoreAdapter(private var articles: List<Article>, private val onClick: (Article) -> Unit) :
+    RecyclerView.Adapter<ReadMoreAdapter.ReadMoreViewHolder>() {
+    class ReadMoreViewHolder(view: View): RecyclerView.ViewHolder(view) {
         //readmore
         val readMoreTitle:TextView=view.findViewById(R.id.readMoreTitle)
        val  readMoreImage:ImageView=view.findViewById(R.id.readMoreImage)

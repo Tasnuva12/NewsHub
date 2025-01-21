@@ -15,7 +15,9 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import coil.transform.RoundedCornersTransformation
-import com.nexdecade.newshub.data.Article
+import com.nexdecade.newshub.adapters.NewsAdapter
+import com.nexdecade.newshub.adapters.ReadMoreAdapter
+import com.nexdecade.newshub.models.Article
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -24,7 +26,7 @@ class ArticleFragment : Fragment() {
     private lateinit var recyclerView: RecyclerView
     //adapter
     private lateinit var adapter: NewsAdapter
-    private lateinit var adapterReadMore:ReadMoreAdapter
+    private lateinit var adapterReadMore: ReadMoreAdapter
     //viewmodel
     private val viewModel by activityViewModels<MainViewModel>()
 
@@ -56,7 +58,7 @@ class ArticleFragment : Fragment() {
         recyclerView.layoutManager = LinearLayoutManager(context)
         val randomArticles=viewModel.randomArticle(3)
 
-        adapterReadMore=ReadMoreAdapter(randomArticles){ selectedArticle->
+        adapterReadMore= ReadMoreAdapter(randomArticles) { selectedArticle ->
             Log.d("ArticleFragment", "Selected Article: $selectedArticle")
             getItem(selectedArticle)
         }

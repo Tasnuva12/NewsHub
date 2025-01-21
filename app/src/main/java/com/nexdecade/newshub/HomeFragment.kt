@@ -11,7 +11,8 @@ import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.nexdecade.newshub.data.Article
+import com.nexdecade.newshub.adapters.NewsAdapter
+import com.nexdecade.newshub.models.Article
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -39,7 +40,7 @@ class HomeFragment : Fragment() {
         recyclerView.layoutManager = LinearLayoutManager(context)
 
         //initialize  adapter
-        adapter = NewsAdapter(emptyList()) { article->
+        adapter = NewsAdapter(emptyList()) { article ->
             goToArticleFragment(article)
         }
         recyclerView.adapter = adapter

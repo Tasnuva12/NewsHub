@@ -1,4 +1,4 @@
-package com.nexdecade.newshub.data
+package com.nexdecade.newshub.models
 
 
 

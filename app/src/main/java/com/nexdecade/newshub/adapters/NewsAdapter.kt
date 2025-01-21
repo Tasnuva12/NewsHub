@@ -1,4 +1,4 @@
-package com.nexdecade.newshub
+package com.nexdecade.newshub.adapters
 
 import android.os.Build
 import android.view.LayoutInflater
@@ -6,16 +6,13 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import coil.transform.RoundedCornersTransformation
-import com.bumptech.glide.Glide
-import com.bumptech.glide.load.resource.bitmap.RoundedCorners
-import com.bumptech.glide.request.RequestOptions
-import com.nexdecade.newshub.data.Article
+import com.nexdecade.newshub.R
+import com.nexdecade.newshub.models.Article
 import java.time.ZonedDateTime
 import java.time.temporal.ChronoUnit
 
