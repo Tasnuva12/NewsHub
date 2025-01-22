@@ -42,11 +42,10 @@ kapt {
 }
 
 dependencies {
-
+    // Android and UI dependencies
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
-    implementation (libs.androidx.core.ktx.v1140)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.navigation.fragment.ktx)
@@ -55,18 +54,18 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
+    // Hilt dependencies
     implementation(libs.hilt.android)
     kapt(libs.hilt.android.compiler)
 
-    //Retrofit Library
+    // Retrofit dependencies
     val retrofit_version = "2.11.0"
-    implementation (libs.converter.gson)
-    implementation (libs.retrofit)
-    implementation (libs.retrofit2.kotlin.coroutines.adapter)
-    implementation(libs.logging.interceptor) // for http logging interceptor
+    implementation(libs.converter.gson)
+    implementation(libs.retrofit)
+    implementation(libs.retrofit2.kotlin.coroutines.adapter)
+    implementation(libs.logging.interceptor)
 
-
-    // ViewModel
+    // ViewModel and Lifecycle dependencies
     val lifecycle_version = "2.8.6"
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
     implementation(libs.androidx.lifecycle.viewmodel.compose)
@@ -76,21 +75,14 @@ dependencies {
     implementation(libs.androidx.lifecycle.viewmodel.savedstate)
     kapt(libs.androidx.lifecycle.compiler)
 
-
-
-    val room_version = "2.6.1"
-
     // Room dependencies
-    implementation ("androidx.room:room-runtime:$room_version" ) // Use the latest version
+    val room_version = "2.6.1" // Updated version
+    implementation("androidx.room:room-runtime:$room_version")
+    kapt("androidx.room:room-compiler:$room_version")
+    implementation("androidx.room:room-ktx:$room_version") // For coroutines
 
-
-    // For Kotlin users, use KAPT instead of annotationProcessor
-    kapt ("androidx.room:room-compiler:2.5.1")
-    //coil
+    // Image loading libraries
     implementation(libs.coil)
-
-    //Glide
-    implementation (libs.glide)
-    annotationProcessor (libs.compiler)
-
+    implementation(libs.glide)
+    annotationProcessor(libs.compiler)  // Glide annotation processor
 }
