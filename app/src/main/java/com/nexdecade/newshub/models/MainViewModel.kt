@@ -1,10 +1,10 @@
-package com.nexdecade.newshub
+package com.nexdecade.newshub.models
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.nexdecade.newshub.models.Article
-import com.nexdecade.newshub.data.NewsDataRepository
+import com.nexdecade.newshub.data.Article
+import com.nexdecade.newshub.repository.NewsDataRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject

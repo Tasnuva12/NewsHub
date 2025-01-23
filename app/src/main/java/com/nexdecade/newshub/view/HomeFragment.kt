@@ -1,18 +1,20 @@
-package com.nexdecade.newshub
+package com.nexdecade.newshub.view
 
 import android.os.Bundle
 import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.nexdecade.newshub.R
 import com.nexdecade.newshub.adapters.NewsAdapter
-import com.nexdecade.newshub.models.Article
+import com.nexdecade.newshub.data.Article
+import com.nexdecade.newshub.models.MainViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

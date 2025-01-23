@@ -1,14 +1,12 @@
 package com.nexdecade.newshub.db
 
-import android.renderscript.Long2
-import android.renderscript.Long3
 import androidx.lifecycle.LiveData
 import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import com.nexdecade.newshub.models.Article
+import com.nexdecade.newshub.data.Article
 
 
 

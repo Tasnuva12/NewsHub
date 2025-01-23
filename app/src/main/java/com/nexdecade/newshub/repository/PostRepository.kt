@@ -1,5 +1,6 @@
-package com.nexdecade.newshub.data
+package com.nexdecade.newshub.repository
 
+import com.nexdecade.newshub.api.NewsApi
 import javax.inject.Inject
 
 class PostRepository @Inject constructor(

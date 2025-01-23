@@ -1,4 +1,4 @@
-package com.nexdecade.newshub
+package com.nexdecade.newshub.util
 
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.Fragment

@@ -9,7 +9,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import com.nexdecade.newshub.R
-import com.nexdecade.newshub.models.Article
+import com.nexdecade.newshub.data.Article
 
 class ReadMoreAdapter(private var articles: List<Article>, private val onClick: (Article) -> Unit) :
     RecyclerView.Adapter<ReadMoreAdapter.ReadMoreViewHolder>() {

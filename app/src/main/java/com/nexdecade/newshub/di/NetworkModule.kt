@@ -1,7 +1,7 @@
 package com.nexdecade.newshub.di
 
-import com.nexdecade.newshub.Constants.Companion.BASE_URL
-import com.nexdecade.newshub.data.NewsApi
+import com.nexdecade.newshub.util.Constants.Companion.BASE_URL
+import com.nexdecade.newshub.api.NewsApi
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

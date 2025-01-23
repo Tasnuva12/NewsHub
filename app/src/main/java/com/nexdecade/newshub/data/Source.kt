@@ -1,4 +1,4 @@
-package com.nexdecade.newshub.models
+package com.nexdecade.newshub.data
 
 
 import androidx.annotation.Keep

@@ -1,13 +1,13 @@
-package com.nexdecade.newshub
+package com.nexdecade.newshub.view
 
 import android.os.Bundle
 import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.navOptions
@@ -15,9 +15,11 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import coil.transform.RoundedCornersTransformation
+import com.nexdecade.newshub.R
 import com.nexdecade.newshub.adapters.NewsAdapter
 import com.nexdecade.newshub.adapters.ReadMoreAdapter
-import com.nexdecade.newshub.models.Article
+import com.nexdecade.newshub.data.Article
+import com.nexdecade.newshub.models.MainViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

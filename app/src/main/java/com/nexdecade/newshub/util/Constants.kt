@@ -1,4 +1,4 @@
-package com.nexdecade.newshub
+package com.nexdecade.newshub.util
 
 class Constants {
     companion object{

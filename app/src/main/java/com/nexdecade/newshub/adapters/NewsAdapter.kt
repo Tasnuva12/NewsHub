@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import coil.transform.RoundedCornersTransformation
 import com.nexdecade.newshub.R
-import com.nexdecade.newshub.models.Article
+import com.nexdecade.newshub.data.Article
 import java.time.ZonedDateTime
 import java.time.temporal.ChronoUnit
 
