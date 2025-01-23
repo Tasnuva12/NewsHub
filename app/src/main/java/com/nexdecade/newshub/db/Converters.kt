@@ -1,7 +1,7 @@
 package com.nexdecade.newshub.db
 
 import androidx.room.TypeConverter
-import com.nexdecade.newshub.models.Source
+import com.nexdecade.newshub.data.Source
 
 
 
